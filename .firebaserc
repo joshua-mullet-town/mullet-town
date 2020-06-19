@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "mullet-town",
+    "test": "mullet-town",
+    "prod": "mullet-town"
+  }
+}
