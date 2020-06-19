@@ -3,6 +3,9 @@ export default class Typer {
     this.copy = inst[field]
     this.inst = inst
     this.field = field
+    this.typePace = 80
+    this.clearPace = 60
+    this.transitionLength = 200
     this.q = []
   }
 
@@ -22,12 +25,41 @@ export default class Typer {
     return this
   }
 
-  doAndThen (wait, func) {
-    return new Promise(resolve => {
+  clear (amount = -1) {
+    this.q.push({
+      type: 'clear',
+      amount,
+    })
+    return this
+  }
+
+  custom (func) {
+    this.q.push({
+      type: 'custom',
+      func,
+    })
+    return this
+  }
+
+  getRandom (error = 40) {
+    return (error / -2) + Math.random() * error
+  }
+
+  pacedType (copy) {
+    copy.split('').forEach((char, idx) => {
       setTimeout(() => {
-        func()
-        resolve()
-      }, wait)
+        this.inst[this.field] += char
+      }, this.typePace * idx) // +  this.getRandom(40))
+    })
+  }
+
+  pacedClear (amount) {
+    amount = amount === -1 ? this.inst[this.field].length : amount
+    Array(amount).fill().forEach((_, idx) => {
+      setTimeout(() => {
+        const copy = this.inst[this.field]
+        this.inst[this.field] = copy.substring(0, copy.length - 1)
+      }, this.clearPace * idx)// +  this.getRandom(40))
     })
   }
 
@@ -39,13 +71,18 @@ export default class Typer {
       if (action.type === 'wait') {
         time += action.time
       } else if (action.type === 'type') {
-        execString += `setTimeout(() => console.log("wow"), ${time});`
+        execString += `setTimeout(() => this.pacedType("${action.copy}"), ${time});`
+        time += action.copy.length * this.typePace + this.transitionLength
+      } else if (action.type === 'clear') {
+        execString += `setTimeout(() => this.pacedClear(${action.amount}), ${time});`
+        time += (action.amount === -1 ? this.inst[this.field].length : action.amount) * this.typePace + this.transitionLength
+      } else if (action.type === 'custom') {
+        execString += `setTimeout(${action.func.toString()}, ${time});`
       }
     })
 
     console.log(execString)
-
-    eval(execString).call(this)
+    eval(execString)//.call(this)
 
     //console.log(this.q)
   }

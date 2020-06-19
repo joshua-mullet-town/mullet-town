@@ -4,7 +4,7 @@ export default {
   name: 'Joshua',
   data() {
     return {
-      copy: 'hello',
+      copy: '',
       showCursor: false,
       typer: null,
     }
@@ -24,10 +24,22 @@ export default {
     this.startCursor()
     this.typer = new Typer(this, 'copy')
     this.typer
-      .wait(1000)
-      .type('')
-      .wait(2000)
-      .type('Hi!')
+      // .wait(1000)
+      // .type('hello')
+      // .wait(2000)
+      // .clear()
+      // .wait(1500)
+      .type('My name is Joshua and I build things.')
+      //.wait(3800)
+      .clear(1)
+      //.wait(200)
+      .type(' quickly.')
+      //.wait(1500)
+      .clear(8)
+      //.wait(1000)
+      .type(' like lightning.')
+      //.wait()
+      .custom(() => this.inst.$refs.display.style.backgroundColor = 'black')
       .go()
   },
 }
@@ -37,21 +49,30 @@ export default {
   .joshua-main
     .joshua-container
       .content
-        .auto-type-box(
-          :class='showCursor ? "cursor" : ""'
-        ) {{copy}}
+        .auto-type-box {{copy}}
+          span(
+            :class='showCursor ? "cursor" : ""'
+          )
+        .display-box(
+          ref='display'
+        )
 </template>
 
 <style lang="sass" scoped>
   .joshua-main
     .joshua-container
       .content
-        padding: 3rem
+        display: grid
+        grid-template-columns: 1fr 1fr
+        height: 100vh
         .auto-type-box
-          font-size: 72px
+          padding: 3rem 4rem
+          font-size: 48px
           font-family: Courier New
-          width: fit-content
-          padding-right: .5rem
-          &.cursor
+          .cursor
             border-right: thick solid black
+            padding-left: .25rem
+        .display-box
+          transition: .25s all
+          background-color: white
 </style>
