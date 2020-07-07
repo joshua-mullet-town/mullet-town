@@ -1,7 +1,7 @@
 @import '$vars'
 .pro-form
   > .title,
-    @extend .font-1-bold
+    //@extend .font-1-bold
     font-size: 32px
     margin-bottom: 3rem
   > .form-row
@@ -25,27 +25,3 @@
       font-size: 14px
       margin: .25rem 0
       color: $orange
-
-.pro-button
-  @extend .font-1-bold
-  padding: 12px 24px
-  //min-width: 100px
-  width: fit-content
-  font-size: 14px
-  text-align: center
-  cursor: pointer
-  user-select: none
-  border-radius: 8px
-  &.minor
-    //border: $green thin solid
-    color: $green
-    &.white
-      color: white
-  &.major
-    background-color: $green
-    color: white
-  &.outline
-    border: thin solid black
-  &.delete
-    background-color: red
-    color: white

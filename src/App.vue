@@ -124,9 +124,8 @@ export default {
     margin: 0
 
   .pro-button
-    @extend .font-1-bold
+    font-family: $font-2
     cursor: pointer
-    border-radius: 1rem
     padding: .75em 1.5em
     font-size: 20px
     background-color: black

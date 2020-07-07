@@ -23,6 +23,7 @@ export default {
 <template lang="pug">
   .public-main-main
     .public-main-container
+      pro-nav
       transition(
         :name='transtionName'
         mode='out-in'
@@ -41,7 +42,7 @@ export default {
       .router-view
         .public-container
           .header
-            display: grid
+            display: grid 
             height: 70vh
             position: relative
             .banner

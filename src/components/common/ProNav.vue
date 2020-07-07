@@ -177,9 +177,10 @@ export default {
           .title(
             v-if='seeLogo'
           )
-            img(
+            .copy.font-2 Mullet Town
+            //img(
               src='@/assets/img/common/logo.png'
-            )
+              )
       .actions
         .pro-button.portal.cs-gradient(
           v-if='$store.state.auth && ($route.name !== "StudentDashboard")'
@@ -273,12 +274,14 @@ export default {
       display: grid
       grid-template-columns: auto auto
       align-items: center
-      padding: 1em 2em
+      padding: 1.5em 3em
       box-sizing: border-box
       .title-holder
         width: fit-content
         cursor: pointer
         .title
+          .copy
+            font-size: 48px
           > img
             height: 25px
       .actions

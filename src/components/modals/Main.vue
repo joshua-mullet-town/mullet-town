@@ -157,7 +157,6 @@ export default {
               color: white
               display: flex
               > .button
-                @extend .pro-button
                 border-sizing: border-box
                 padding: 8px 24px
                 background-color: white
