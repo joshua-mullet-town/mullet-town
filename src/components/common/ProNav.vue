@@ -182,22 +182,14 @@ export default {
               src='@/assets/img/common/logo.png'
               )
       .actions
-        .pro-button.portal.cs-gradient(
-          v-if='$store.state.auth && ($route.name !== "StudentDashboard")'
-          @click='$router.push({name: "StudentDashboard"})'
-        ) Portal
-        .pro-button.portal.cs-gradient(
-          v-if='$store.state.auth && ($route.name !== "AdminStats") && (user && user.role === "ADMIN")'
-          @click='$router.push({name: "AdminStats"})'
-        ) Admin
-        .pro-button.logout(
-          v-if='$store.state.auth'
-          @click='logout'
-        ) Logout
-        .pro-button.login.cs-gradient(
-          @click='showLogin'
-          v-if='!$store.state.auth'
-        ) Login
+        .pro-button.login(
+          @click='$router.push({name: "PublicMain"})'
+          v-if='$route.name !== "PublicMain" || true'
+        ) Home
+        .pro-button.skills(
+          @click='$router.push({name: "PublicSkills"})'
+          v-if='$route.name !== "PublicSkills"'
+        ) Skills
       transition(
         name='fade'
       )

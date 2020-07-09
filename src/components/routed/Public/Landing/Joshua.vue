@@ -34,32 +34,36 @@ export default {
       .type('Hello.')
       .wait(1000)
       .clear()
-      .type('My name is Joshua Mullet and this town is me.')
+      .type('My name is Joshua Mullet and this little town down below works just like I do.')
       .wait(1000)
       .clear()
-      .type('This town will only help you with one thing, getting you to where you want to go.')
+      .type('For one, this town offers one thing, fuel to get you where you are going.')
       .wait(1000)
       .clear()
-      .type('Like this town, you can expect no frills.')
-      .clear()
-      .type('There is no mall or fancy restraunts to make it seem more impressive than it is.')
+      .type('Similarly, my only goal is build websites to get you and your ideas to their destination.')
       .wait(1000)
       .clear()
-      .type('It only wants to offer the resources that keep you moving.')
-      .wait(500)
-      .clear()
-      .type('I\'m a web developer.')
-      .wait(500)
-      .type(' That\'s it.')
-      .clear()
-      .type('I can design and build some snazzy websites.')
+      .type('Another way I am like this town is that while it isn\'t large or fancy, it offers everything you need.')
       .wait(1000)
-      .type(' But I\'m not here to get in your way.')
       .clear()
-      .type('All I want is to take your idea, your direction, your input and make it real.')
+      .type('Likewise, I\'m just one guy with no frills or fancy technical terms I use to try and impress.')
+      .wait(1000)
+      .clear()
+      .type('However, you can trust that the website you are looking to be built can be found here.')
+      .wait(1000)
+      .clear()
+      .type('Lastly, while extremely simply, this town has a natural beauty to it.')
+      .clear()
+      .break()
+      .type('I love building websites that are both functional and beautiful in a way that doesn\'t overpower, but compliments, the message of the website.')
+      .wait(1000)
+      .clear()
+      .type('My only goal is to beautifully support while otherwise staying out of the way.')
       .wait(2000)
       .clear()
-      .type('So, feel free to look at my skills, previous projects, and maybe even reach out.')
+      .type('Want to build something together?')
+      .wait(1000)
+      .type(' Feel free to look at my skills, previous projects, and reach out if you\'d like.')
       .go()
   },
 }
@@ -84,9 +88,9 @@ export default {
       .content
         display: grid
         height: 100vh
-        background-image: url('../../../../assets/img/landing/main.png')
+        background-image: url('../../../../../design/main.svg')
         background-size: cover
-        background-position: 50% right
+        background-position: center center
         .auto-type-box
           padding: 6rem 3rem
           max-width: 800px
