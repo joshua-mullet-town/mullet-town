@@ -3,9 +3,9 @@ export default class Typer {
     this.copy = inst[field]
     this.inst = inst
     this.field = field
-    this.typePace = 80
+    this.typePace = 60
     this.clearPace = 60
-    this.transitionLength = 400
+    this.transitionLength = 200
     this.clearAllLength = 800
     this.q = []
   }

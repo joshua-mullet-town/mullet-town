@@ -115,7 +115,7 @@ export default {
   @import '$vars'
   body
     margin: 0
-    font-family: $font-1
+    font-family: $font-2
   #app
     position: relative
   input[type=number]::-webkit-inner-spin-button, 

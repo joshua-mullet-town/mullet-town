@@ -182,44 +182,13 @@ export default {
               src='@/assets/img/common/logo.png'
               )
       .actions
-        .pro-button.login(
+        //.pro-button.login(
           @click='$router.push({name: "PublicMain"})'
           v-if='$route.name !== "PublicMain" || true'
-        ) Home
+          ) Home
         .pro-button.skills(
-          @click='$router.push({name: "PublicSkills"})'
-          v-if='$route.name !== "PublicSkills"'
+          @click='$modals.show({name: "skills"})'
         ) Skills
-      transition(
-        name='fade'
-      )
-        .floating-login(
-          v-if='seeLogin'
-        )
-          .floating-login-container
-            .pro-form
-              .form-row(
-                v-for='(options, key) in formOptions'
-                v-if='!options.seeIf || options.seeIf()'
-              )
-                pro-input(
-                  :options='options'
-                  v-model='form[key]'
-                )
-            .buttons
-              .pro-button.login(
-                @click='largeButtonAction'
-              ) {{loginButtonCopy}}
-              .pro-button.plain.forgot(
-                @click='onSmallButton'
-              ) {{smallButtonCopy}}
-              template(
-                v-if='$route.name !== "SignUp"'
-              )
-                .question Don't have an account?
-                .pro-button.cs-gradient(
-                  @click='onSignUp'
-                ) Sign up for free!
     transition(
       name='fade'
     )
@@ -262,11 +231,10 @@ export default {
     .mobile-nav
       display: none
     .pro-nav-container
-      //height: $nav-height
       display: grid
       grid-template-columns: auto auto
       align-items: center
-      padding: 1.5em 3em
+      padding: 1.5rem 3rem
       box-sizing: border-box
       .title-holder
         width: fit-content
@@ -280,36 +248,22 @@ export default {
         justify-self: end
         display: flex
         > *
-          font-size: 16px
-          padding: .75rem 1.5rem
-          margin-left: 1rem
+          font-size: 24px
+          padding: .25rem .75rem
+          margin-left: .5rem
       .mobile-nav-button
         display: none
-      .floating-login
-        position: absolute
-        right: 2rem
-        display: grid
-        top: 5rem
-        .floating-login-container
-          padding: 3rem 2rem 2rem
-          background-color: white
-          border-radius: .75rem
-          box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, .4)
-          width: 280px
-          box-sizing: border-box
-          .pro-form
-            margin-bottom: 1rem
-          .buttons
-            display: grid
-            justify-items: center
-            .pro-button
-              width: calc(100% - 3rem)
-              &.forgot
-                margin-bottom: 1rem
-                font-size: 12px
-            .question
-              margin-bottom: .5rem
-            //grid-template-columns: auto auto
+  @media (max-width: 700px)
+    .pro-nav-main
+      .pro-nav-container
+        padding: 1rem 1.5rem
+        .title-holder
+          .title
+            .copy
+              font-size: 36px
+        .actions
+          > *
+            font-size: 16px
   @media (max-width: 500px)
     .pro-nav-main
       .mobile-nav

@@ -34,27 +34,28 @@ export default {
       .type('Hello.')
       .wait(1000)
       .clear()
-      .type('My name is Joshua Mullet and this little town down below works just like I do.')
+      .type('My name is Joshua Muleet')
+      .clear(3)
+      .type('let and this little town down below works just like I do.')
       .wait(1000)
       .clear()
-      .type('For one, this town offers one thing, fuel to get you where you are going.')
+      .type('For instance, this town offers one thing, fuel to get you where you are going.')
       .wait(1000)
       .clear()
-      .type('Similarly, my only goal is build websites to get you and your ideas to their destination.')
+      .type('Similarly, my only goal is to build websites to get you and your ideas to their destination.')
       .wait(1000)
       .clear()
-      .type('Another way I am like this town is that while it isn\'t large or fancy, it offers everything you need.')
+      .type('Another way I am like this town is that, while it isn\'t large or fancy, it offers everything you need.')
       .wait(1000)
       .clear()
       .type('Likewise, I\'m just one guy with no frills or fancy technical terms I use to try and impress.')
       .wait(1000)
       .clear()
-      .type('However, you can trust that the website you are looking to be built can be found here.')
+      .type('However, you can trust that the website you are looking to be built can be found here in Mullet Town.')
       .wait(1000)
       .clear()
       .type('Lastly, while extremely simply, this town has a natural beauty to it.')
       .clear()
-      .break()
       .type('I love building websites that are both functional and beautiful in a way that doesn\'t overpower, but compliments, the message of the website.')
       .wait(1000)
       .clear()
@@ -100,4 +101,10 @@ export default {
             .cursor
               border-right: thick solid black
               padding-left: .25rem
+  @media (max-width:700px)
+    .joshua-main
+      .joshua-container
+        .content
+          .auto-type-box
+            padding: 6rem 1.5rem
 </style>

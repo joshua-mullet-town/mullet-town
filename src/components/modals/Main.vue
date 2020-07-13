@@ -2,12 +2,14 @@
 import Alert from './Alert'
 import CardInput from './CardInput'
 import DatePicker from './DatePicker'
+import Skills from './Skills'
 export default {
   name: 'ModalsMain',
   components: {
     'alert': Alert,
     'card-input': CardInput,
     'date-picker': DatePicker,
+    'skills': Skills,
   },
   data () {
     return {
@@ -93,10 +95,13 @@ export default {
             span(
               @click.stop=''
             )
-              component(
-                :is='comp'
-                :options='modalsOptions[comp]'
-                )
+              transition(
+                name='from-top'
+              )
+                component(
+                  :is='comp'
+                  :options='modalsOptions[comp]'
+                  )
 </template>
 
 <style lang="sass">
@@ -110,7 +115,7 @@ export default {
     .modals-container
       height: 100%
       width: 100%
-      background-color: transparentize(grey, .5)
+      //background-color: transparentize(grey, .5)
       position: absolute
       > span
         > .modal-main
@@ -122,25 +127,27 @@ export default {
           height: auto
           max-height: 100vh
           width: 320px
-          border-radius: 10px
-          box-shadow: 0 0 15px 0 transparentize(black, .7)
-          border: thin grey solid
+          //border-radius: 10px
+          box-shadow: 0 0 .5rem 0 transparentize(black, .5)
+          //border: thin grey solid
           overflow-y: scroll
           > .modal-container
             > *
               padding: 16px
             > .title
-              @extend .font-1-bold
-              font-size: 20px
+              @extend .font-2
+              font-size: 24px
               color: white
-              background-color: $green
+              background-color: $red
+              //border: black thin solid
             > .content
               padding: 24px
               max-height: calc(100vh - 232px)
               overflow-y: scroll
+              background-color: $orange
               .description
-                font-size: 14px
-                margin-bottom: 32px
+                font-size: 18px
+                margin-bottom: 1rem
               .content-title
                 font-size: 1.6em
               .input-field
@@ -153,7 +160,7 @@ export default {
                   &.active
                     transform: translateY(-8px) scale(0.8)
             > .action
-              background-color: $green
+              background-color: $red
               color: white
               display: flex
               > .button
