@@ -76,6 +76,19 @@ export default {
             },
           ],
         },
+        {
+          title: 'Other',
+          skills: [
+            {
+              name: 'Bare knuckle brawl',
+              stars: .5,
+            },
+            {
+              name: 'Volleyball',
+              stars: 4.5,
+            },
+          ],
+        }
       ],
     }
   },
