@@ -189,6 +189,13 @@ export default {
         .pro-button.skills(
           @click='$modals.show({name: "skills"})'
         ) Skills
+        .pro-button.projects(
+          @click='$modals.show({name: "projects"})'
+        ) Projects
+        a(
+          href='mailto:jormullet@gmail.com?subject=Howdy, Joshua!&body=So, I\'ve got an idea...'
+        )
+          i.material-icons email
     transition(
       name='fade'
     )
@@ -249,8 +256,11 @@ export default {
         display: flex
         > *
           font-size: 24px
-          padding: .25rem .75rem
+          padding: .25rem
           margin-left: .5rem
+        > a
+          > i
+            color: white
       .mobile-nav-button
         display: none
   @media (max-width: 700px)
@@ -264,6 +274,9 @@ export default {
         .actions
           > *
             font-size: 16px
+          > a
+            > i
+              font-size: 16px
   @media (max-width: 500px)
     .pro-nav-main
       .mobile-nav

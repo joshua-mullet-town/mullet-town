@@ -3,6 +3,8 @@ import Alert from './Alert'
 import CardInput from './CardInput'
 import DatePicker from './DatePicker'
 import Skills from './Skills'
+import Projects from './Projects'
+import ProjectRecap from './ProjectRecap'
 export default {
   name: 'ModalsMain',
   components: {
@@ -10,6 +12,8 @@ export default {
     'card-input': CardInput,
     'date-picker': DatePicker,
     'skills': Skills,
+    'projects': Projects,
+    'project-recap': ProjectRecap,
   },
   data () {
     return {

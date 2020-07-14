@@ -23,6 +23,14 @@ export default {
               name: 'Java',
               stars: 3,
             },
+            {
+              name: 'NPM',
+              stars: 4.5,
+            },
+            {
+              name: 'Github',
+              stars: 4.5,
+            },
           ]
         },
         {
