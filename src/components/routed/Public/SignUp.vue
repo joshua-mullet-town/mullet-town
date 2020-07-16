@@ -1,5 +1,4 @@
 <script>
-import bannerImg from '@/assets/img/sign-up/banner.jpg'
 import arrayOfStates from '@/global/js/arrayOfStates.json'
 import arrayOfCountries from '@/global/js/arrayOfCountries.json'
 import ProNav from '$common/ProNav.vue'
@@ -37,7 +36,6 @@ export default {
   },
   data () {
     return {
-      bannerImg,
       stage: 'USER',
       form: {
         email: '',
@@ -244,9 +242,6 @@ export default {
     .sign-up-container.public-container
       .header
         .banner
-          .image(
-            :style='{backgroundImage: `url(${bannerImg})`}'
-          )
         .copy
           .copy-container
             .title.font-2
