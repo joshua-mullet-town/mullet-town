@@ -84,33 +84,27 @@ export default {
 </template>
 
 <style lang="sass" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap')
-  @import url("https://use.typekit.net/vdd2onk.css")
-
-  $font-2: 'VT323', monospace
-  .font-2
-    font-family: $font-2
+.joshua-main
+  .joshua-container
+    .content
+      display: grid
+      height: 100vh
+      background-image: url('../assets/design/main.svg')
+      background-size: cover
+      background-position: center center
+      .auto-type-box
+        padding: 6rem 3rem
+        max-width: 800px
+        .copy
+          font-size: 32px
+          font-family: $font-2
+          .cursor
+            border-right: thick solid black
+            padding-left: .25rem
+@media (max-width:700px)
   .joshua-main
     .joshua-container
       .content
-        display: grid
-        height: 100vh
-        background-image: url('../assets/design/main.svg')
-        background-size: cover
-        background-position: center center
         .auto-type-box
-          padding: 6rem 3rem
-          max-width: 800px
-          .copy
-            font-size: 32px
-            font-family: $font-2
-            .cursor
-              border-right: thick solid black
-              padding-left: .25rem
-  @media (max-width:700px)
-    .joshua-main
-      .joshua-container
-        .content
-          .auto-type-box
-            padding: 6rem 1.5rem
+          padding: 6rem 1.5rem
 </style>
