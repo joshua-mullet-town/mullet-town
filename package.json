@@ -1,73 +1,30 @@
 {
-  "name": "vue-firebase-template",
+  "name": "mullet-town",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --port 3000",
-    "serve:prod": "vue-cli-service serve --port 3000 --mode prod",
-    "build": "vue-cli-service build",
-    "build:prod": "vue-cli-service build --mode prod",
-    "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit",
-    "deploy": "firebase deploy",
-    "tag": "./tag $1"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
-    "@google/maps": "^1.1.0",
-    "firebase": "^6.3.1",
-    "firebase-tools": "^7.16.2",
-    "material-design-icons": "^3.0.1",
-    "pug": "^2.0.4",
-    "pug-plain-loader": "^1.0.0",
-    "register-service-worker": "^1.6.2",
-    "vue": "^2.6.10",
-    "vue-cal": "^2.24.7",
-    "vue-cookies": "^1.5.13",
-    "vue-resource": "^1.5.1",
-    "vue-router": "^3.0.3",
-    "vue-vimeo-player": "^0.1.0",
-    "vuejs-datepicker": "^1.6.2",
-    "vuex": "^3.0.1"
+    "register-service-worker": "^1.7.2",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-plugin-pwa": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "babel-eslint": "^10.0.1",
-    "chai": "^4.1.2",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {
-      "no-console": "off",
-      "no-useless-escape": "off",
-      "no-unused-vars": "off"
-    },
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+    "@vue/cli-plugin-pwa": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0"
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
   ]
 }
