@@ -1,10 +1,24 @@
-<template>
-  <router-view/>
+<script>
+import ModalsMain from '$modals/Main'
+export default {
+  name: 'App',
+  components: {
+    'modals-main': ModalsMain,
+  }
+}
+</script>
+
+
+<template lang="pug">
+#app
+  modals-main 
+  router-view
 </template>
 
 <style lang="sass">
 body
   margin: 0
+  font-family: $font-2
 
 .pro-button
   font-family: $font-2
