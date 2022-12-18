@@ -90,7 +90,7 @@ span
     .modals-main(
       v-if='Object.keys(this.modalsOptions).length'
     )
-      span(
+      template(
         v-for='(comp, idx) in componentsList'
       )
         .modals-container(
@@ -100,13 +100,10 @@ span
             span(
               @click.stop=''
             )
-              transition(
-                name='from-top'
-              )
-                component(
-                  :is='comp'
-                  :options='modalsOptions[comp]'
-                  )
+              component(
+                :is='comp'
+                :options='modalsOptions[comp]'
+                )
 </template>
 
 <style lang="sass">

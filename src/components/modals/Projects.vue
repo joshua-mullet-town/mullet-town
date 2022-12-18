@@ -3,6 +3,15 @@ export default {
   name: 'Projects',
   data() {
     return {
+      mainProject: {
+        title: 'sno',
+        img: 'snowflake.svg',
+        url: 'https://sno.one',
+        buttonWidth: '16rem',
+        overview: 'sno allows anyone who uses a Square POS system (like, a coffee shop or sports stadium) to let their customers order from their seats, allowing the customer to skip the line.',
+        skills: ['integrations', 'Square', 'design', 'rapid, feedback-driven development', 'SSO'],
+        features: ['free to use', 'utlra-lightweight', 'intuitive'],
+      },
       projects: [
         {
           title: 'uncool',
@@ -46,6 +55,7 @@ export default {
         {
           title: 'GiveGrove',
           img: 'givegrove.png',
+          url: 'https://givegrove.com',
           buttonWidth: '10rem',
           overview: 'GiveGrove allows for donors to interact with fundraisers online. This means donors can view live auction items beforehand, place bids online for silent auction, buy votes for their favorite teams, and much more.',
           skills: ['coding', 'design',],
@@ -70,7 +80,16 @@ export default {
   .projects-container.modal-container
     .title Projects
     .content
-      .description These are things I have built.
+      .description This is the neatest thing I have built.
+      .projects-holder.main
+        .main-project.project(
+          :style='{width: mainProject.buttonWidth || "8rem", ...(mainProject.style || {})}'
+          @click='emitter.emit("show-modal", {name: "project-recap", ...mainProject})'
+        )
+          img(
+            :src='`img/projects/${mainProject.img}`'
+          )
+      .description These are other things I have built.
       .projects-holder
         .project(
           v-for='project in projects'
@@ -97,6 +116,8 @@ export default {
         display: grid
         grid-template-columns: auto auto
         justify-items: center
+        &.main
+          grid-template-columns: auto
         .project
           $dim: 8rem
           height: $dim
@@ -108,6 +129,10 @@ export default {
           margin: 0 1rem 1rem 0
           transition: all .15s
           background-color: white
+          &.main-project
+            height: 12rem
+            > img
+              width: 10rem
           &:hover
             box-shadow: 0 0 .5rem 0 black
             transform: scale(1.05, 1.05)

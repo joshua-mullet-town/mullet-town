@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       copy: '',
-      showCursor: false,
+      showCursor: true,
       typer: null,
       images: [
         {
@@ -30,40 +30,50 @@ export default {
     this.startCursor()
     this.typer = new Typer(this, 'copy')
     this.typer
-      .wait(1000)
+      .wait(400)
       .type('Hello.')
-      .wait(1000)
-      .clear()
+      .skipLine()
+      .wait(400)
       .type('My name is Josh Mu')
       .clear(3)
       .type('ua Mullet and this little town down below works just like I do.')
-      .wait(1000)
-      .clear()
+      .scroll()
+      .wait(400)
+      .skipLine()
       .type('For instance, this town offers one thing, fuel to get you where you want to go.')
-      .wait(1000)
-      .clear()
+      .scroll()
+      .wait(400)
+      .skipLine()
       .type('Similarly, my only goal is to build websites to get you and your ideas to their destination.')
-      .wait(1000)
-      .clear()
+      .scroll()
+      .wait(400)
+      .skipLine()
       .type('Another way I am like this town is that, while it isn\'t large or fancy, it offers everything you need.')
-      .wait(1000)
-      .clear()
+      .scroll()
+      .skipLine()
+      .wait(400)
       .type('Likewise, I\'m just one guy with no frills or fancy technical terms I use to try and impress.')
-      .wait(1000)
-      .clear()
+      .scroll()
+      .skipLine()
+      .wait(400)
       .type('However, you can trust that the website you are looking to be built can be found here in Mullet Town.')
-      .wait(1000)
-      .clear()
-      .type('Lastly, while extremely simple, this town has a natural beauty to it.')
-      .clear()
+      .scroll()
+      .wait(400)
+      .skipLine()
+      .type('Lastly, while quite simple, this town has a natural beauty to it.')
+      .scroll()
+      .skipLine()
       .type('I love building websites that are both functional and beautiful in a way that doesn\'t overpower, but compliments, the message of the website.')
-      .wait(1000)
-      .clear()
+      .scroll()
+      .skipLine()
+      .wait(400)
       .type('My only goal is to beautifully support while otherwise staying out of the way.')
-      .wait(2000)
-      .clear()
+      .scroll()
+      .skipLine()
+      .wait(200)
       .type('Want to build something together?')
-      .wait(1000)
+      .scroll()
+      .wait(800)
       .type(' Feel free to look at my skills, previous projects, and reach out if you\'d like.')
       .go()
   },
@@ -74,13 +84,15 @@ export default {
 .joshua-main
   .joshua-container
     .content
-      .auto-type-box
+      .auto-type-box(
+        ref='copyHolder'
+      )
         span.copy(
           ref='copy'
         ) {{copy}}
-          span(
-            :class='showCursor ? "cursor" : ""'
-          )
+        span(
+          :class='showCursor ? "cursor" : ""'
+        )
 </template>
 
 <style lang="sass" scoped>
@@ -93,18 +105,30 @@ export default {
       background-size: cover
       background-position: center center
       .auto-type-box
-        padding: 6rem 3rem
+        padding: 0rem 3rem 6rem 3rem
         max-width: 800px
+        max-height: 20rem
+        overflow-y: scroll
+        scrollbar-width: none
+        margin-top: 6rem
+        &::-webkit-scrollbar
+          display: none
         .copy
           font-size: 32px
           font-family: $font-2
-          .cursor
-            border-right: thick solid black
-            padding-left: .25rem
+          padding-bottom: 10rem
+        .cursor
+          border-right: thick solid black
+          padding-left: .2rem
+          height: 1.5rem
+          display: inline-grid
+          bottom: -.1rem
+          position: relative
+
 @media (max-width:700px)
   .joshua-main
     .joshua-container
       .content
         .auto-type-box
-          padding: 6rem 1.5rem
+          padding: 0rem 1.5rem
 </style>

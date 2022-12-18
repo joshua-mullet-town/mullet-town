@@ -16,6 +16,10 @@ export default {
               stars: 4.5,
             },
             {
+              name: 'React',
+              stars: 4,
+            },
+            {
               name: 'HTML, CSS/SASS & JavaScript',
               stars: 5,
             },
@@ -45,6 +49,14 @@ export default {
               stars: 4.5,
             },
             {
+              name: 'Square',
+              stars: 4.5,
+            },
+            {
+              name: 'Zapier',
+              stars: 4.5,
+            },
+            {
               name: 'Twilio',
               stars: 4,
             },
@@ -52,6 +64,10 @@ export default {
               name: 'Algolia',
               stars: 3.5,
             },
+            {
+              name: 'Braintree',
+              stars: 3.5,
+            }
           ],
         },
         {

@@ -1,6 +1,11 @@
 <script>
 export default {
   name: 'ProNav',
+  data () {
+    return {
+      wow: '<div>wow</div>'
+    }
+  },  
   mounted () {
     this.emitter.emit('event', 'poopz')
   },
@@ -21,7 +26,7 @@ export default {
         @click='emitter.emit("show-modal", {name: "projects"})'
       ) Projects
       a(
-        href='mailto:jormullet@gmail.com?subject=Howdy, Joshua!&body=So, I\'ve got an idea...'
+        href='mailto:joshua@mullet.town?subject=Howdy, Joshua!&body=So, I\'ve got an idea...'
       )
         i.material-icons email
 
