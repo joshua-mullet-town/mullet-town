@@ -107,7 +107,7 @@ export default {
       .auto-type-box
         padding: 0rem 3rem 6rem 3rem
         max-width: 800px
-        max-height: 20rem
+        max-height: 16rem
         overflow-y: scroll
         scrollbar-width: none
         margin-top: 6rem

@@ -84,26 +84,24 @@ export default {
 
 <template lang="pug">
 span
-  transition(
-    name='fade'
-  )
-    .modals-main(
-      v-if='Object.keys(this.modalsOptions).length'
+  .modals-main
+    span(
+      v-for='(comp, idx) in componentsList'
     )
-      template(
-        v-for='(comp, idx) in componentsList'
+      transition(
+        name='from-top'
       )
         .modals-container(
+          @click='() => onContainerClick(comp)'
           v-if='visibleComps.includes(comp)'
-          @click='onContainerClick(comp)'
+        )
+          span(
+            @click.stop=''
           )
-            span(
-              @click.stop=''
+            component(
+              :is='comp'
+              :options='modalsOptions[comp]'
             )
-              component(
-                :is='comp'
-                :options='modalsOptions[comp]'
-                )
 </template>
 
 <style lang="sass">
@@ -114,11 +112,13 @@ span
   width: 100vw
   position: fixed
   z-index: 950
+  pointer-events: none
   .modals-container
     height: 100%
     width: 100%
     //background-color: transparentize(grey, .5)
     position: absolute
+    pointer-events: auto
     > span
       > .modal-main
         background-color: white
