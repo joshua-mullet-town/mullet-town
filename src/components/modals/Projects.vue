@@ -4,15 +4,24 @@ export default {
   data() {
     return {
       mainProject: {
-        title: 'sno',
-        img: 'snowflake.svg',
-        url: 'https://sno.one',
+        title: 'Agent Billy',
+        img: 'agent-billy.png',
+        url: 'https://github.com/joshua-mullet-town/agent-billy',
         buttonWidth: '16rem',
-        overview: 'sno allows anyone who uses a Square POS system (like, a coffee shop or sports stadium) to let their customers order from their seats, allowing the customer to skip the line.',
-        skills: ['integrations', 'Square', 'design', 'rapid, feedback-driven development', 'SSO'],
-        features: ['free to use', 'utlra-lightweight', 'intuitive'],
+        overview: 'Agent Billy is an AI developer that works directly from GitHub issues. It enables stakeholders to contribute to codebases they could never work with before—just describe what you need and Billy handles the coding, testing, and pull requests. Being proven out daily and improving continuously.',
+        skills: ['AI-driven automation', 'GitHub App development', 'VM orchestration', 'Claude Code CLI integration', 'end-to-end workflow automation'],
+        features: ['real-time GitHub issue processing', 'intelligent clarification conversations', 'automated VM provisioning & testing', 'complete PR automation with cleanup'],
       },
       projects: [
+        {
+          title: 'sno',
+          img: 'snowflake.svg',
+          url: 'https://sit-n-order-prod.web.app/',
+          buttonWidth: '16rem',
+          overview: 'sno allows anyone who uses a Square POS system (like, a coffee shop or sports stadium) to let their customers order from their seats, allowing the customer to skip the line.',
+          skills: ['integrations', 'Square', 'design', 'rapid, feedback-driven development', 'SSO'],
+          features: ['free to use', 'ultra-lightweight', 'intuitive'],
+        },
         {
           title: 'uncool',
           img: 'uncool.png',

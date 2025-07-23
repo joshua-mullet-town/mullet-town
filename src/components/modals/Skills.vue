@@ -5,6 +5,27 @@ export default {
     return {
       skillsSections: [
         {
+          title: 'AI & Automation',
+          skills: [
+            {
+              name: 'LLM Integration (Claude, GPT)',
+              stars: 4.5,
+            },
+            {
+              name: 'AI Workflow Automation',
+              stars: 4,
+            },
+            {
+              name: 'Agent Development',
+              stars: 4,
+            },
+            {
+              name: 'GitHub App Development',
+              stars: 4.5,
+            },
+          ]
+        },
+        {
           title: 'Coding',
           skills: [
             {
