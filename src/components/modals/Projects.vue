@@ -23,6 +23,15 @@ export default {
           features: ['free to use', 'ultra-lightweight', 'intuitive'],
         },
         {
+          title: 'clawtree',
+          img: 'clawtree.png',
+          url: 'https://www.npmjs.com/package/clawtree',
+          buttonWidth: '8rem',
+          overview: 'ClawTree is a minimal CLI tool for managing Git worktrees with an intuitive terminal interface, designed for Claude Code workflows. It allows developers to work on multiple branches simultaneously without switching contexts.',
+          skills: ['CLI development', 'Git automation', 'terminal UI', 'npm packaging', 'workflow optimization'],
+          features: ['interactive terminal dashboard', 'git worktree management', 'Claude Code integration', 'VS Code integration', 'smart branch detection'],
+        },
+        {
           title: 'uncool',
           img: 'uncool.png',
           url: 'https://www.npmjs.com/package/uncool',
@@ -51,16 +60,16 @@ export default {
           skills: ['coding', 'design',],
           features: ['10 day build', 'admin dashboard', 'comprehensive analytics', 'used in 5 different countries'],
         },
-        {
-          title: 'Correct Property Tax',
-          img: 'cpt.png',
-          url: 'https://app.correctpropertytax.com/',
-          style: {backgroundColor: 'black'},
-          buttonWidth: '13rem',
-          overview: 'Correct Property Tax reassesses property values for property owners to avoid paying too much during tax season. I took a process that included sending physical documents, paying via check, no automatic tracking, no automatic emails and put all of it online in order to streamline their process.',
-          skills: ['coding', 'design', 'client management',],
-          features: ['online document signing', 'online sign up', 'online payment', 'automatic client tracking', 'automatic emails',]
-        },
+        // {
+        //   title: 'Correct Property Tax',
+        //   img: 'cpt.png',
+        //   url: 'https://app.correctpropertytax.com/',
+        //   style: {backgroundColor: 'black'},
+        //   buttonWidth: '13rem',
+        //   overview: 'Correct Property Tax reassesses property values for property owners to avoid paying too much during tax season. I took a process that included sending physical documents, paying via check, no automatic tracking, no automatic emails and put all of it online in order to streamline their process.',
+        //   skills: ['coding', 'design', 'client management',],
+        //   features: ['online document signing', 'online sign up', 'online payment', 'automatic client tracking', 'automatic emails',]
+        // },
         {
           title: 'GiveGrove',
           img: 'givegrove.png',
@@ -70,14 +79,14 @@ export default {
           skills: ['coding', 'design',],
           features: ['online payment', 'securely built to process millions of dollars worth of donations', 'easy to use for all generations',],
         },
-        {
-          title: 'Pie For Providers',
-          img: 'pie.png',
-          buttonWidth: '10rem',
-          overview: 'Pie For Providers helps child care providers track data about their clients in order to claim the maximum child care subsidy.',
-          skills: ['coding',],
-          features: ['monthly subscriptions', 'heavy analytics', 'bilingual',],
-        }
+        // {
+        //   title: 'Pie For Providers',
+        //   img: 'pie.png',
+        //   buttonWidth: '10rem',
+        //   overview: 'Pie For Providers helps child care providers track data about their clients in order to claim the maximum child care subsidy.',
+        //   skills: ['coding',],
+        //   features: ['monthly subscriptions', 'heavy analytics', 'bilingual',],
+        // }
       ]
     }
   },
