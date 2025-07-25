@@ -32,7 +32,7 @@ export default {
     .title-holder
       .title
         .copy.font-2 Mullet Town
-        .subtitle population: 1 AI guy
+        .subtitle population: 1 guy with AI
     .actions
       .pro-button.skills(
         @click='emitter.emit("show-modal", {name: "skills"})'
