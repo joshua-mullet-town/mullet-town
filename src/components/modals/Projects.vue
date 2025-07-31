@@ -32,6 +32,15 @@ export default {
           features: ['interactive terminal dashboard', 'git worktree management', 'Claude Code integration', 'VS Code integration', 'smart branch detection'],
         },
         {
+          title: 'tAIcher',
+          img: 'taicher.png',
+          url: 'https://clover-and-quill.web.app/',
+          buttonWidth: '8rem',
+          overview: 'tAIcher is an AI-powered teaching platform that enables teachers to create dynamic, personalized lessons. Teachers can assign custom lessons (like Python tutorials) with various question types, while students engage through an interactive ChatGPT-style interface that adapts to their responses.',
+          skills: ['AI orchestration', 'multi-agent systems', 'dynamic UI generation', 'educational technology', 'conversational AI'],
+          features: ['dynamic question generation (multiple choice, open text, true/false)', 'teacher-defined lesson creation', 'adaptive student interactions', 'orchestrated agent communication', 'personalized learning paths'],
+        },
+        {
           title: 'uncool',
           img: 'uncool.png',
           url: 'https://www.npmjs.com/package/uncool',
