@@ -14,12 +14,23 @@ export default {
   .project-recap-container.modal-container
     .title {{options.title}}
     .content
-      a.header.area(
-        :href='options.url'
-        target='_blank'
+      .header.area(
         :style='options.style || {}'
       )
-        i.material-icons launch
+        a(
+          v-if='!options.isDownload'
+          :href='options.url'
+          target='_blank'
+          class='launch-link'
+        )
+          i.material-icons launch
+        a.download-badge(
+          v-if='options.isDownload'
+          :href='options.downloadUrl'
+          download
+        )
+          i.material-icons file_download
+          .download-text Download for macOS
         img(
           :src='`img/projects/${options.recapImg || options.img}`'
         )
@@ -41,7 +52,17 @@ export default {
             v-for='feature in options.features'
           ) {{feature}}
     .action
+      a.button.major.download-button(
+        v-if='options.isDownload'
+        :href='options.downloadUrl'
+        download
+      ) Download Whisper Village
+      .button.secondary(
+        v-if='options.isDownload'
+        @click='emitter.emit("hide-modal", "project-recap")'
+      ) Close
       .button.major(
+        v-if='!options.isDownload'
         @click='emitter.emit("hide-modal", "project-recap")'
       ) Close
 </template>
@@ -60,11 +81,36 @@ export default {
         border-radius: .5rem
         box-shadow: 0 0 5px 0 black
         position: relative
-        > i
+        .launch-link > i
           position: absolute
           right: 2px
           top: 2px
           color: $red
+        .download-badge
+          position: absolute
+          right: 8px
+          top: 8px
+          background: #333
+          color: white
+          padding: 0.5rem 1rem
+          border-radius: 20px
+          display: flex
+          align-items: center
+          gap: 0.5rem
+          font-size: 14px
+          font-weight: bold
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2)
+          text-decoration: none
+          cursor: pointer
+          transition: all 0.2s ease
+          &:hover
+            background: #555
+            transform: translateY(-1px)
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3)
+            color: white
+            text-decoration: none
+          .download-text
+            font-size: 12px
         > img
           max-width: 100%
           max-height: 400px
@@ -80,4 +126,25 @@ export default {
           margin: 0
           > li
             font-size: 18px
+    .action
+      display: flex
+      gap: 1rem
+      .download-button
+        background-color: white
+        color: black
+        text-decoration: none
+        padding: 8px 24px
+        text-align: center
+        cursor: pointer
+        border: white 2px solid
+        transition: all .25s
+        user-select: none
+        &:hover
+          text-decoration: none
+          color: black
+      .secondary
+        background: #95a5a6
+        color: white
+        &:hover
+          background: #7f8c8d
 </style>

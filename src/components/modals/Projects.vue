@@ -4,23 +4,25 @@ export default {
   data() {
     return {
       mainProject: {
-        title: 'Agent Billy',
-        img: 'agent-billy.png',
-        url: 'https://github.com/joshua-mullet-town/agent-billy',
+        title: 'Whisper Village',
+        img: 'whisper-village.png',
+        url: 'https://github.com/joshua-mullet-town/whisper-village/releases/download/v1.0.0/Whisper.Village.dmg',
         buttonWidth: '16rem',
-        overview: 'Agent Billy is an AI developer that works directly from GitHub issues. It enables stakeholders to contribute to codebases they could never work with before—just describe what you need and Billy handles the coding, testing, and pull requests. Being proven out daily and improving continuously.',
-        skills: ['AI-driven automation', 'GitHub App development', 'VM orchestration', 'Claude Code CLI integration', 'end-to-end workflow automation'],
-        features: ['real-time GitHub issue processing', 'intelligent clarification conversations', 'automated VM provisioning & testing', 'complete PR automation with cleanup'],
+        overview: 'Whisper Village is an AI-powered voice transcription app for macOS. Just speak naturally and watch your words appear instantly with 99% accuracy. Perfect for writers, journalists, students, and anyone who needs reliable speech-to-text conversion.',
+        skills: ['macOS app development', 'AI transcription', 'Swift/SwiftUI', 'Audio processing', 'UI/UX design', 'Open source forking & attribution'],
+        features: ['instant AI transcription', 'multiple AI model support', 'keyboard shortcut integration', 'offline processing', 'recording timer', 'clean, intuitive interface'],
+        downloadUrl: 'https://github.com/joshua-mullet-town/whisper-village/releases/download/v1.0.0/Whisper.Village.dmg',
+        isDownload: true
       },
       projects: [
         {
-          title: 'sno',
-          img: 'snowflake.svg',
-          url: 'https://sit-n-order-prod.web.app/',
-          buttonWidth: '16rem',
-          overview: 'sno allows anyone who uses a Square POS system (like, a coffee shop or sports stadium) to let their customers order from their seats, allowing the customer to skip the line.',
-          skills: ['integrations', 'Square', 'design', 'rapid, feedback-driven development', 'SSO'],
-          features: ['free to use', 'ultra-lightweight', 'intuitive'],
+          title: 'Agent Billy',
+          img: 'agent-billy.png',
+          url: 'https://github.com/joshua-mullet-town/agent-billy',
+          buttonWidth: '8rem',
+          overview: 'Agent Billy is an AI developer that works directly from GitHub issues. It enables stakeholders to contribute to codebases they could never work with before—just describe what you need and Billy handles the coding, testing, and pull requests. Being proven out daily and improving continuously.',
+          skills: ['AI-driven automation', 'GitHub App development', 'VM orchestration', 'Claude Code CLI integration', 'end-to-end workflow automation'],
+          features: ['real-time GitHub issue processing', 'intelligent clarification conversations', 'automated VM provisioning & testing', 'complete PR automation with cleanup'],
         },
         {
           title: 'clawtree',
@@ -30,6 +32,15 @@ export default {
           overview: 'ClawTree is a minimal CLI tool for managing Git worktrees with an intuitive terminal interface, designed for Claude Code workflows. It allows developers to work on multiple branches simultaneously without switching contexts.',
           skills: ['CLI development', 'Git automation', 'terminal UI', 'npm packaging', 'workflow optimization'],
           features: ['interactive terminal dashboard', 'git worktree management', 'Claude Code integration', 'VS Code integration', 'smart branch detection'],
+        },
+        {
+          title: 'sno',
+          img: 'snowflake.svg',
+          url: 'https://sit-n-order-prod.web.app/',
+          buttonWidth: '8rem',
+          overview: 'sno allows anyone who uses a Square POS system (like, a coffee shop or sports stadium) to let their customers order from their seats, allowing the customer to skip the line.',
+          skills: ['integrations', 'Square', 'design', 'rapid, feedback-driven development', 'SSO'],
+          features: ['free to use', 'ultra-lightweight', 'intuitive'],
         },
         {
           title: 'tAIcher',
