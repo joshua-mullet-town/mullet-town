@@ -2,6 +2,7 @@
 import Alert from './Alert'
 import Skills from './Skills'
 import Projects from './Projects'
+import ProjectTimeline from './ProjectTimeline'
 import ProjectRecap from './ProjectRecap'
 export default {
   name: 'ModalsMain',
@@ -9,6 +10,7 @@ export default {
     //'alert': Alert,
     'skills': Skills,
     'projects': Projects,
+    'project-timeline': ProjectTimeline,
     'project-recap': ProjectRecap,
   },
   data () {

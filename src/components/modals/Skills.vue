@@ -8,12 +8,12 @@ export default {
           title: 'AI & Automation',
           skills: [
             {
-              name: 'LLM Integration (Claude, GPT)',
-              stars: 4.5,
+              name: 'AI Workflow Automation',
+              stars: 5,
             },
             {
-              name: 'AI Workflow Automation',
-              stars: 4,
+              name: 'Third-Party API Integration',
+              stars: 4.5,
             },
             {
               name: 'Agent Development',
@@ -29,24 +29,16 @@ export default {
           title: 'Coding',
           skills: [
             {
-              name: 'Vue',
+              name: 'React',
               stars: 5,
+            },
+            {
+              name: 'Vue',
+              stars: 4,
             },
             {
               name: 'Node.js',
               stars: 4.5,
-            },
-            {
-              name: 'React',
-              stars: 4,
-            },
-            {
-              name: 'HTML, CSS/SASS & JavaScript',
-              stars: 5,
-            },
-            {
-              name: 'Java',
-              stars: 3,
             },
             {
               name: 'NPM',
@@ -68,6 +60,10 @@ export default {
             {
               name: 'Stripe',
               stars: 4.5,
+            },
+            {
+              name: 'AWS',
+              stars: 4,
             },
             {
               name: 'Square',
@@ -97,14 +93,6 @@ export default {
             {
               name: 'Web UI/UX',
               stars: 4.5,
-            },
-            {
-              name: 'Adobe Illustator',
-              stars: 3.5,
-            },
-            {
-              name: 'Adobe Photoshop',
-              stars: 3,
             },
           ]
         },

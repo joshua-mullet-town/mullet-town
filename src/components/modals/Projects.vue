@@ -124,9 +124,11 @@ export default {
           :style='{width: mainProject.buttonWidth || "8rem", ...(mainProject.style || {})}'
           @click='emitter.emit("show-modal", {name: "project-recap", ...mainProject})'
         )
-          img(
-            :src='`img/projects/${mainProject.img}`'
-          )
+          .project-image.main
+            img(
+              :src='`img/projects/${mainProject.img}`'
+            )
+          .project-name {{ mainProject.title }}
       .description These are other things I have built.
       .projects-holder
         .project(
@@ -134,9 +136,11 @@ export default {
           :style='{width: project.buttonWidth || "8rem", ...(project.style || {})}'
           @click='emitter.emit("show-modal", {name: "project-recap", ...project})'
         )
-          img(
-            :src='`img/projects/${project.img}`'
-          )
+          .project-image
+            img(
+              :src='`img/projects/${project.img}`'
+            )
+          .project-name {{ project.title }}
     .action
       .button.major(
         @click='emitter.emit("hide-modal", "projects")'
@@ -158,33 +162,58 @@ export default {
           grid-template-columns: auto
         .project
           $dim: 8rem
-          height: $dim
           cursor: pointer
           border-radius: .5rem
           box-shadow: 0 0 .25rem 0 black
           padding: 1rem
           position: relative
-          margin: 0 1rem 1rem 0
-          transition: all .15s
+          margin: 0 1rem 1.5rem 0
+          transition: all .2s ease
           background-color: white
+          display: flex
+          flex-direction: column
+          align-items: center
           &.main-project
-            height: 12rem
-            > img
-              width: 10rem
+            .project-image.main
+              height: 12rem
+              > img
+                width: 10rem
           &:hover
-            box-shadow: 0 0 .5rem 0 black
-            transform: scale(1.05, 1.05)
-          > img
-            max-height: 100%
-            max-width: 100%
-            position: relative
-            top: 50%
-            left: 50%
-            transform: translateY(-50%) translateX(-50%)
+            box-shadow: 0 0 .75rem 0 rgba(0, 0, 0, 0.4)
+            transform: translateY(-4px) scale(1.02)
+            .project-image
+              transform: scale(1.05)
+            .project-name
+              color: #4DBA87
+              text-shadow: 0 0 8px rgba(77, 186, 135, 0.3)
+          .project-image
+            height: $dim
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: all .2s ease
+            > img
+              max-height: 100%
+              max-width: 100%
+              object-fit: contain
+          .project-name
+            font-family: $font-2
+            font-size: 14px
+            font-weight: 600
+            text-align: center
+            margin-top: 0.75rem
+            color: #333
+            transition: all .2s ease
+            line-height: 1.2
 @media (max-width:600px)
   #projects-main
     .projects-container
       .content
         .projects-holder
           grid-template-columns: auto
+          .project
+            margin: 0 0 1.5rem 0
+            .project-name
+              font-size: 12px
 </style>

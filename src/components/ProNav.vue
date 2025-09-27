@@ -38,7 +38,7 @@ export default {
         @click='emitter.emit("show-modal", {name: "skills"})'
       ) Skills
       .pro-button.projects(
-        @click='emitter.emit("show-modal", {name: "projects"})'
+        @click='emitter.emit("show-modal", {name: "project-timeline"})'
       ) Projects
       .email-button(
         @click='copyEmail'
