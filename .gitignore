@@ -24,3 +24,4 @@ pnpm-debug.log*
 .firebase/hosting.ZGlzdA.cache
 .clawtree-sessions/
 registry.json
+.playwright-mcp/

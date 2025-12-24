@@ -2,6 +2,28 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Memory System
+
+**Every new agent should read these files FIRST:**
+
+### STATE.md - What We Know (The Past)
+- **Location:** `/Users/joshuamullet/code/mullet-town/STATE.md`
+- **Contains:** Facts, lessons learned, accomplished work
+- **Organization:** Newest entries at top with **full timestamps** (date AND time, e.g., `[2025-12-10 14:30]`)
+
+### PLAN.md - What We're Doing (The Future)
+- **Location:** `/Users/joshuamullet/code/mullet-town/PLAN.md`
+- **Contains:** Current work, next steps, active tasks
+- **Organization:** Current task at top, priority order descending
+
+### The Workflow (Scoop & Consolidate)
+1. Work on top item in PLAN.md
+2. When completed: scoop it off the top
+3. Consolidate into concise learning
+4. Drop at top of STATE.md with **full timestamp** (date + time)
+
+---
+
 ## Development Commands
 
 ### Development Server

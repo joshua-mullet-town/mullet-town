@@ -18,19 +18,18 @@ export default {
         :style='options.style || {}'
       )
         a(
-          v-if='!options.isDownload'
+          v-if='!options.isDownload && !options.isInternalLink'
           :href='options.url'
           target='_blank'
           class='launch-link'
         )
           i.material-icons launch
-        a.download-badge(
-          v-if='options.isDownload'
-          :href='options.downloadUrl'
-          download
+        a.view-badge(
+          v-if='options.isInternalLink'
+          :href='options.url'
         )
-          i.material-icons file_download
-          .download-text Download for macOS
+          i.material-icons open_in_new
+          .view-text View Landing Page
         img(
           :src='`img/projects/${options.recapImg || options.img}`'
         )
@@ -52,17 +51,16 @@ export default {
             v-for='feature in options.features'
           ) {{feature}}
     .action
-      a.button.major.download-button(
-        v-if='options.isDownload'
-        :href='options.downloadUrl'
-        download
-      ) Download Whisper Village
+      a.button.major.view-button(
+        v-if='options.isInternalLink'
+        :href='options.url'
+      ) View Whisper Village
       .button.secondary(
-        v-if='options.isDownload'
+        v-if='options.isInternalLink'
         @click='emitter.emit("hide-modal", "project-recap")'
       ) Close
       .button.major(
-        v-if='!options.isDownload'
+        v-if='!options.isInternalLink'
         @click='emitter.emit("hide-modal", "project-recap")'
       ) Close
 </template>
@@ -86,11 +84,11 @@ export default {
           right: 2px
           top: 2px
           color: $red
-        .download-badge
+        .view-badge
           position: absolute
           right: 8px
           top: 8px
-          background: #333
+          background: $red
           color: white
           padding: 0.5rem 1rem
           border-radius: 20px
@@ -104,12 +102,12 @@ export default {
           cursor: pointer
           transition: all 0.2s ease
           &:hover
-            background: #555
+            background: darken($red, 10%)
             transform: translateY(-1px)
             box-shadow: 0 4px 8px rgba(0,0,0,0.3)
             color: white
             text-decoration: none
-          .download-text
+          .view-text
             font-size: 12px
         > img
           max-width: 100%
@@ -129,19 +127,20 @@ export default {
     .action
       display: flex
       gap: 1rem
-      .download-button
-        background-color: white
-        color: black
+      .view-button
+        background-color: $red
+        color: white
         text-decoration: none
         padding: 8px 24px
         text-align: center
         cursor: pointer
-        border: white 2px solid
+        border: $red 2px solid
         transition: all .25s
         user-select: none
         &:hover
           text-decoration: none
-          color: black
+          color: white
+          background-color: darken($red, 10%)
       .secondary
         background: #95a5a6
         color: white

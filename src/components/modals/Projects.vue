@@ -6,13 +6,12 @@ export default {
       mainProject: {
         title: 'Whisper Village',
         img: 'whisper-village.png',
-        url: 'https://github.com/joshua-mullet-town/whisper-village/releases/download/v1.1.0/Whisper.Village.v1.1.0.dmg',
+        url: '/whisper-village',
         buttonWidth: '16rem',
         overview: 'Whisper Village is an AI-powered voice transcription app for macOS. Just speak naturally and watch your words appear instantly with 99% accuracy. Perfect for writers, journalists, students, and anyone who needs reliable speech-to-text conversion.',
         skills: ['macOS app development', 'AI transcription', 'Swift/SwiftUI', 'Audio processing', 'UI/UX design', 'Open source forking & attribution'],
         features: ['instant AI transcription', 'multiple AI model support', 'keyboard shortcut integration', 'offline processing', 'recording timer', 'clean, intuitive interface'],
-        downloadUrl: 'https://github.com/joshua-mullet-town/whisper-village/releases/download/v1.1.0/Whisper.Village.v1.1.0.dmg',
-        isDownload: true
+        isInternalLink: true
       },
       projects: [
         {
