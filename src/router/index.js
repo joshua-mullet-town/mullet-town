@@ -16,6 +16,13 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     }
+  },
+  {
+    path: '/whisper-village',
+    name: 'whisper-village',
+    component: function () {
+      return import(/* webpackChunkName: "whisper-village" */ '../views/WhisperVillageView.vue')
+    }
   }
 ]
 
