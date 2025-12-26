@@ -8,23 +8,6 @@ export default {
       displayedWords: [],
       contexts: [
         {
-          type: 'email',
-          label: 'Gmail',
-          header: 'To: sarah@company.com',
-          phrases: [
-            "Hey Sarah, just following up on the proposal I sent over last week. Let me know if you have any questions!"
-          ]
-        },
-        {
-          type: 'slack',
-          label: 'Slack',
-          header: '#product-team',
-          phrases: [
-            "Hey team, standup in 5 minutes! Don't forget to update your tickets.",
-            "On my way!"
-          ]
-        },
-        {
           type: 'terminal',
           label: 'Claude Code',
           header: '>',
@@ -33,20 +16,27 @@ export default {
           ]
         },
         {
-          type: 'email',
-          label: 'Gmail',
-          header: 'To: team@startup.io',
+          type: 'terminal',
+          label: 'Claude Code',
+          header: '>',
           phrases: [
-            "Hi everyone! Quick update on the Q4 roadmap. We're on track for the November launch."
+            "Refactor the user authentication to use JWT tokens instead of sessions"
           ]
         },
         {
           type: 'slack',
           label: 'Slack',
-          header: '#random',
+          header: '#dev-team',
           phrases: [
-            "Anyone up for lunch at the new taco place?",
-            "I'm in!"
+            "Just pushed the fix to staging. Can someone review the PR?"
+          ]
+        },
+        {
+          type: 'terminal',
+          label: 'Claude Code',
+          header: '>',
+          phrases: [
+            "Write unit tests for the checkout flow"
           ]
         },
         {
@@ -55,6 +45,54 @@ export default {
           header: '>',
           phrases: [
             "Fix the bug where users can submit the form twice by double clicking"
+          ]
+        },
+        {
+          type: 'email',
+          label: 'Gmail',
+          header: 'To: team@startup.io',
+          phrases: [
+            "Hi everyone! Quick update on the release. We're on track for Friday."
+          ]
+        },
+        {
+          type: 'terminal',
+          label: 'Claude Code',
+          header: '>',
+          phrases: [
+            "Add dark mode support to the settings page"
+          ]
+        },
+        {
+          type: 'terminal',
+          label: 'Claude Code',
+          header: '>',
+          phrases: [
+            "Create an API endpoint that returns paginated search results"
+          ]
+        },
+        {
+          type: 'slack',
+          label: 'Slack',
+          header: '#random',
+          phrases: [
+            "Anyone up for lunch?"
+          ]
+        },
+        {
+          type: 'terminal',
+          label: 'Claude Code',
+          header: '>',
+          phrases: [
+            "Optimize the database queries on the dashboard page"
+          ]
+        },
+        {
+          type: 'terminal',
+          label: 'Claude Code',
+          header: '>',
+          phrases: [
+            "Add input validation to the signup form with helpful error messages"
           ]
         }
       ],
