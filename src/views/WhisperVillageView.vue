@@ -25,11 +25,11 @@ export default {
           ]
         },
         {
-          type: 'code',
-          label: 'VS Code',
-          header: 'utils.js',
+          type: 'terminal',
+          label: 'Claude Code',
+          header: '>',
           phrases: [
-            "function calculateTotal(items) { return items.reduce((sum, item) => sum + item.price, 0); }"
+            "Add a loading spinner to the submit button while the form is processing"
           ]
         },
         {
@@ -50,11 +50,11 @@ export default {
           ]
         },
         {
-          type: 'code',
-          label: 'VS Code',
-          header: 'api.py',
+          type: 'terminal',
+          label: 'Claude Code',
+          header: '>',
           phrases: [
-            "def get_user(id): return db.query(User).filter(User.id == id).first()"
+            "Fix the bug where users can submit the form twice by double clicking"
           ]
         }
       ],
@@ -556,9 +556,9 @@ export default {
   // Slack style
   &.screen-slack
     background: linear-gradient(180deg, #f8f8f8 0%, #fff 100%)
-  // VS Code style
-  &.screen-code
-    background: #1e1e1e
+  // Terminal/Claude Code style
+  &.screen-terminal
+    background: #1a1a2e
 
 .context-header
   display: flex
@@ -592,17 +592,18 @@ export default {
     background: linear-gradient(135deg, #36C5F0 25%, #2EB67D 25%, #2EB67D 50%, #ECB22E 50%, #ECB22E 75%, #E01E5A 75%)
     border-radius: 1px
 
-.logo-code
-  background: #007ACC
+.logo-terminal
+  background: #1a1a2e
+  border: 1px solid #4a9eff
   position: relative
   &::after
-    content: '><'
+    content: '>_'
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
     font-size: 5px
-    color: white
+    color: #4a9eff
     font-weight: bold
 
 .context-label
@@ -618,8 +619,8 @@ export default {
   margin-bottom: 4px
   flex-shrink: 0
 
-.screen-code .message-header
-  color: #888
+.screen-terminal .message-header
+  color: #4a9eff
   font-family: 'SF Mono', 'Fira Code', monospace
 
 .screen-slack .message-header
@@ -633,13 +634,13 @@ export default {
   line-height: 1.25
   width: 100%
   flex: 1
-  // Code style
-  &.text-code
+  // Terminal style - natural language, not code
+  &.text-terminal
     .word
-      font-family: 'SF Mono', 'Fira Code', monospace
-      color: #9cdcfe
+      font-family: $font-body
+      color: #e0e0e0
     .space
-      font-family: 'SF Mono', 'Fira Code', monospace
+      font-family: $font-body
 
 .word
   font-family: $font-body
@@ -653,14 +654,14 @@ export default {
   font-size: 0.6rem
   flex-shrink: 0
 
-// Code context needs light colors
-.screen-code
+// Terminal context needs light colors
+.screen-terminal
   .context-header
     border-bottom-color: rgba(255, 255, 255, 0.15)
   .context-label
-    color: #888
+    color: #4a9eff
   .cursor
-    background: #569cd6
+    background: #4a9eff
 
 .cursor
   display: inline-block
