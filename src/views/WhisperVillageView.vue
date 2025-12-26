@@ -203,8 +203,10 @@ export default {
     .main-content
       //- Logo centered at top
       .product-header
-        img.logo(src="/img/projects/whisper-village.png" alt="Whisper Village")
-        span.product-name Whisper Village
+        .header-top
+          img.logo(src="/img/projects/whisper-village.png" alt="Whisper Village")
+          span.product-name Whisper Village
+        a.made-by(href="/") by Mullet Town
 
       //- Hero section - dominates the view
       .hero-section
@@ -319,9 +321,6 @@ export default {
               span(v-else) Email copied!
             span.divider •
             a(href="https://github.com/joshua-mullet-town/whisper-village" target="_blank" rel="noopener") GitHub
-          .made-by
-            | Made by
-            a(href="/")  Mullet Town
 </template>
 
 <style lang="sass" scoped>
@@ -336,22 +335,37 @@ export default {
 // Product header - centered at top
 .product-header
   display: flex
+  flex-direction: column
   align-items: center
   justify-content: center
-  gap: 0.75rem
   padding: 2rem 0 1rem
 
+  .header-top
+    display: flex
+    align-items: center
+    gap: 0.75rem
+
   .logo
-    width: 44px
-    height: 44px
-    border-radius: 10px
+    width: 52px
+    height: 52px
+    border-radius: 12px
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2)
 
   .product-name
     font-family: $font-2
-    font-size: 1.5rem
+    font-size: 1.75rem
     color: white
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3)
+
+  .made-by
+    font-family: $font-body
+    font-size: 0.85rem
+    color: rgba(255, 255, 255, 0.7)
+    text-decoration: none
+    margin-top: 0.25rem
+    transition: color 0.2s ease
+    &:hover
+      color: white
 
 .content-wrapper
   padding: 1rem 2rem 2rem
@@ -1169,30 +1183,19 @@ export default {
       margin: 0 0.5rem
       color: rgba(255, 255, 255, 0.4)
 
-  .made-by
-    margin-top: 1rem
-    font-size: 0.9rem
-    color: rgba(255, 255, 255, 0.5)
-    font-family: $font-2
-
-    a
-      color: $red
-      text-decoration: none
-      font-weight: 500
-
-      &:hover
-        text-decoration: underline
-
 @media (max-width: 700px)
   .product-header
     padding: 1.5rem 0 0.5rem
 
     .logo
-      width: 32px
-      height: 32px
+      width: 40px
+      height: 40px
 
     .product-name
-      font-size: 1.2rem
+      font-size: 1.4rem
+
+    .made-by
+      font-size: 0.75rem
 
   .content-wrapper
     padding: 1rem
